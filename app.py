@@ -14,7 +14,7 @@ CORS(app)
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///learning.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.config['SECRET_KEY'] = 'very-secret-key'  # Vulnerability: Hardcoded secret
+app.config['SECRET_KEY'] = 'very-secret-key'  # Vulnerability: Hardcoded secret which will give an error
 app.config['UPLOAD_FOLDER'] = 'uploads'
 
 db = SQLAlchemy(app)
