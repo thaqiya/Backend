@@ -81,8 +81,7 @@ class Assignment(db.Model):
 
 def is_course_teacher(course_id: int, teacher_id: int) -> bool:
     """
-    Check if the given teacher is the owner of the course.
-
+    Check if the given teacher is the owner of the course. :)
     Args:
         course_id (int): The ID of the course to check
         teacher_id (int): The ID of the teacher
