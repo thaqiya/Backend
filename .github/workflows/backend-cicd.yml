@@ -120,8 +120,6 @@ jobs:
             docker run --rm -v /tmp:/zap/wrk -t ghcr.io/zaproxy/zaproxy:stable zap-baseline.py \
               -t http://${{ secrets.SERVER_IP }}:4000 \
               -r zap_report.html
-              -w zap_report.md \
-              -J zap_report.json \
               -I -d
           '
 
