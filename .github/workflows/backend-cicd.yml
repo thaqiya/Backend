@@ -117,7 +117,7 @@ jobs:
         run: |
           ssh ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_IP }} '
             docker pull ghcr.io/zaproxy/zaproxy:stable
-            docker run -t ghcr.io/zaproxy/zaproxy:stable zap-baseline.py \
+            docker run --rm -v /tmp:/zap/wrk -t ghcr.io/zaproxy/zaproxy:stable zap-baseline.py \
               -t http://localhost:4000 \
               -r /tmp/zap_report.html
           '
