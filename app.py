@@ -96,6 +96,11 @@ def is_course_teacher(course_id: int, teacher_id: int) -> bool:
 
 # New routes for enhanced functionality
 
+# New Vulnerability added
+@app.route("/search")
+def search():
+    query = request.args.get("q")
+    return f"<h1>Search Results for: {query}</h1>"
 
 @app.route('/', methods=['GET'])
 def first():
